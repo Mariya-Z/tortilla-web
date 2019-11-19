@@ -1,15 +1,18 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { MatDialog } from '@angular/material';
+
+import { DialogComponent } from '../dialog/dialog.component';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.scss']
+  styleUrls: ['./header.component.scss'],
 })
-export class HeaderComponent implements OnInit {
+export class HeaderComponent {
+  constructor(public dialog: MatDialog) {}
 
-  constructor() { }
-
-  ngOnInit() {
+  onClick() {
+    this.dialog.open(DialogComponent, {width: '250px'});
+    console.log('log in');
   }
-
 }

@@ -1,5 +1,10 @@
-.picture {
+.content {
   display: flex;
   flex-direction: row;
   justify-content: center;
+
+  &__picture {
+    height: 300px;
+    width: 300px;
+  }
 }

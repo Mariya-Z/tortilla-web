@@ -1,0 +1,17 @@
+$black: #000;
+$white: #fff;
+
+.header {
+  background-color: $black;
+  color: $white;
+  display: flex;
+  justify-content: space-between;
+
+  &__title {
+    padding-left: 10px;
+  }
+
+  &__action {
+    margin: 5px 20px;
+  }
+}
