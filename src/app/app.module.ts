@@ -4,23 +4,30 @@ import { NgModule } from '@angular/core';
 
 import { MatButtonModule } from '@angular/material/button';
 
+// components
+import { DialogComponent } from './shared/components';
+
+// modules
+import { AdminModule } from './admin/admin.module';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HomeComponent } from './home/home.component';
+import { LayoutModule } from './layout/layout.module';
 import { SharedModule } from './shared/shared.module';
-import { DialogComponent } from './shared/dialog/dialog.component';
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent],
+  declarations: [AppComponent],
+  entryComponents: [DialogComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     MatButtonModule,
+    AdminModule,
     SharedModule,
+    LayoutModule,
     AppRoutingModule,
-    BrowserAnimationsModule,
+    BrowserAnimationsModule
   ],
   providers: [],
-  bootstrap: [AppComponent, DialogComponent],
+  bootstrap: [AppComponent]
 })
 export class AppModule {}

@@ -4,15 +4,14 @@ import { CommonModule } from '@angular/common';
 import {
   MatButtonModule,
   MatDialogModule,
-  MatInputModule,
+  MatInputModule
 } from '@angular/material';
 
-import { DialogComponent } from './dialog/dialog.component';
-import { HeaderComponent } from './header/header.component';
+import { HeaderComponent, DialogComponent } from './components';
 
 @NgModule({
   declarations: [HeaderComponent, DialogComponent],
   imports: [CommonModule, MatButtonModule, MatDialogModule, MatInputModule],
-  exports: [HeaderComponent],
+  exports: [HeaderComponent]
 })
 export class SharedModule {}
