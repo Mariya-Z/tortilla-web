@@ -8,6 +8,6 @@
   </mat-form-field>
 </div>
 <div mat-dialog-actions>
-  <button mat-button>Cancel</button>
-  <button mat-button>Log in</button>
+  <button mat-button mat-dialog-close>Cancel</button>
+  <button mat-button mat-raised-button (click)="onLogin()">Log in</button>
 </div>

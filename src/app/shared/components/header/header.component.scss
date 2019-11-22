@@ -9,6 +9,10 @@ $white: #fff;
 
   &__title {
     padding-left: 10px;
+
+    &:hover{
+      cursor: pointer;
+    }
   }
 
   &__action {

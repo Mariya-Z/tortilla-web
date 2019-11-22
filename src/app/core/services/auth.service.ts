@@ -1,18 +1,28 @@
 import { Injectable } from '@angular/core';
 
+// rxjs
+import { Observable, of } from 'rxjs';
+import { delay, tap } from 'rxjs/operators';
+
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
-  public isLoggedIn = false;
+  private isLoggedIn = false;
 
-  constructor() {}
-
-  public logIn() {
-    this.isLoggedIn = true;
+  public login(): boolean {
+    // setTimeout(() => {
+      this.isLoggedIn = true;
+      return this.isLoggedIn;
+    // }, 500);
+  // : Observable<boolean> {
+  //   return of(true).pipe(
+  //     delay(1000),
+  //     tap(val => (this.isLoggedIn = val))
+  //   );
   }
 
-  public logOut() {
+  public logout() {
     this.isLoggedIn = false;
   }
 }

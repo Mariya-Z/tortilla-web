@@ -1,7 +1,7 @@
-import { NgModule } from "@angular/core";
-import { CommonModule } from "@angular/common";
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
-import { HomeComponent } from "./components";
+import { HomeComponent } from './components';
 
 @NgModule({
   declarations: [HomeComponent],
